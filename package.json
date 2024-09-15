@@ -4,8 +4,8 @@
   "description": "Liste des projets sur Mibuzz (Côté Back-end et Front-end)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
-  "author": "",
+  "author": "Ananda",
   "license": "ISC"
 }
