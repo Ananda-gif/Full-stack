@@ -1,11 +1,16 @@
 {
-  "name": "full-stack",
+  "name": "projet",
   "version": "1.0.0",
-  "description": "Liste des projets sur Mibuzz (Côté Back-end et Front-end)",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index1.js"
   },
+  "keywords": [],
   "author": "Ananda",
-  "license": "ISC"
+  "license": "ISC",
+  "description": "projet-test",
+  "dependencies": {
+    "express": "^4.20.0",
+    "nodemon": "^3.1.4"
+  }
 }
