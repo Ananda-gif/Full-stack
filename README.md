@@ -6,3 +6,6 @@
 > 3- mise en ligne du serveur et ajout de hello world sur notre serveur
 > 4- création de routes: contact, id, email
 > 5- intégration de Mysql
+> 6- Projet Node.js:
+
+- creation d'un To Do Liste (API)
