@@ -9,3 +9,10 @@
 > 6- Projet Node.js:
 
 - creation d'un To Do Liste (API)
+
+Les autres choses que j'ai fait:
+
+> Flutterflow
+> Figma
+> Adobe XD
+> DOCKER
