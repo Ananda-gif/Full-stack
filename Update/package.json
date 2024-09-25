@@ -1,0 +1,12 @@
+{
+  "name": "update",
+  "version": "1.0.0",
+  "description": "mise-à-jour-des-projets",
+  "main": "index2.js",
+  "scripts": {
+    "start": "nodemon index2",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ananda",
+  "license": "ISC"
+}
