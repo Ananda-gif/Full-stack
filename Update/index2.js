@@ -1,41 +1,30 @@
 const express = require("express");
-const mysql = require("mysql");
+const mysql = require("mysql2");
 const port = 5000;
 
 const app = express();
 
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "node",
-});
-
-connection.connect((err) => {
-  if (err) {
-    console.error("Erreur de connexion : " + err.stack);
-    return;
-  }
-  console.log("Connecté à la base de données MySQL.");
-});
-
-connection.query("SELECT*FROM users", (err, results, fields) => {
-  if (err) throw err;
-  console.log("Données de la table users:", results);
-});
-
-connection.end();
-/*--------------------------------------------------------------*/
-// les anciennes commandes que je peut utiliser
-/*
 app.get("/", (req, res) => {
-  res.status(200).send("HELLO NODE && WORLD");
-});
+  const connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "node",
+  });
 
-const contact = require("./routes/contact");
-app.use("/contact", contact);
-*/
-/* --------------------------------------------------------------*/
+  connection.connect((err) => {
+    if (err) {
+      console.error("Erreur de connexion : " + err.stack);
+      return;
+    }
+    console.log("Connecté à la base de données MySQL.");
+  });
+
+  connection.query("SELECT*FROM users", (err, results, fields) => {
+    if (err) throw err;
+    res.json(results);
+  });
+});
 
 app.listen(port, () => {
   console.log("serveur en ligne et opérationnelle");
