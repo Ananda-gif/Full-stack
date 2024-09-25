@@ -6,20 +6,38 @@ const app = express();
 
 const connection = mysql.createConnection({
   host: "localhost",
-  users: "root",
-  password: "root",
-  database: "Node.js",
+  user: "users", // Nom d'utilisateur
+  password: "new_password", // Mot de passe
+  database: "node2", // Nom de la base de données
 });
+
+connection.connect((err) => {
+  if (err) {
+    console.error("Erreur de connexion : " + err.stack);
+    return;
+  }
+  console.log("Connecté à la base de données MySQL.");
+});
+
+/*--------------------------------------------------------------*/
+
+/*
+const connection = mysql.createConnection({
+  host: "localhost",
+  users: "root",
+  database: "node2",
+});
+
+connection.connect((err) => {
+  if (err) {
+    console.error("Errer de connexion : " + err.stack);
+    return;
+  }
+
+  console.log("connexion reussie à la base de données");
+});
+*/
 
 app.listen(port, () => {
   console.log("serveur est en ligne");
 });
-
-/*
-app.get("/", (req, res) => {
-  res.send("Hello world avec node.js ");
-});
-
-const users = require("./routes/users");
-app.use("/users", users);
-*/
