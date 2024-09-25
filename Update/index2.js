@@ -7,10 +7,8 @@ const app = express();
 const connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "root",
+  password: "",
   database: "node",
-  /*socketPath:
-    "WINDOWS CREATORFull-stackUpdate\node_modulesmysqllibConnection.js)",*/
 });
 
 connection.connect((err) => {
@@ -21,6 +19,12 @@ connection.connect((err) => {
   console.log("Connecté à la base de données MySQL.");
 });
 
+connection.query("SELECT*FROM users", (err, results, fields) => {
+  if (err) throw err;
+  console.log("Données de la table users:", results);
+});
+
+connection.end();
 /*--------------------------------------------------------------*/
 // les anciennes commandes que je peut utiliser
 /*
